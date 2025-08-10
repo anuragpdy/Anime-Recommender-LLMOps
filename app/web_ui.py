@@ -74,4 +74,5 @@ if recommender:
                 logger.info(f"Successfully generated recommendation for query: '{query}'")
             except Exception as e:
                 logger.error(f"Failed to get recommendation for query '{query}': {e}")
-                st.error("An error occurred while fetching recommendations. Please try again.")
+                # Show the actual error in the UI for debugging
+                st.error(f"An error occurred: {e}") 
