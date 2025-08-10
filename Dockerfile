@@ -22,6 +22,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copying all other contents from local to app
 COPY . .
 
+# Create the directory for processed data
+RUN mkdir -p data/processed
+
 # Run the data processing script to build the vector store
 RUN python scripts/build_vector_store.py
 
